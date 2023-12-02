@@ -1,13 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Agrarian"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
+
+			<section class="cta" id="cta-section">
+				<div class="cta__container container">
+					<div class="cta__left-col">
+						<div class="text-block">
+							<div class="text-block__content">
+								<h2>Приєднайся до спільноти!</h2>
+								<div class="text-holder">
+									<p>Приєднуйтесь до ексклюзивного Аграрного Клубу для бізнесу та розширте свої можливості у
+										сільськогосподарській індустрії!</p>
+									<p>
+										Отримайте доступ до передових технологій, експертної поради та вигідних партнерських
+										зв'язків, які допоможуть вашому бізнесу процвітати
+									</p>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="button button--s">приєднатись зараз</a>
+					</div>
+					<div class="cta__right-col">
+						<div class="cta__image-holder">
+							<img src="@img/cta-img.png" width="257" height="233" alt="image">
+						</div>
+						<div class="message">
+							<div class="message__text-holder">
+								<p>“Разом ми створюємо сильну спільноту аграріїв, збагачуючи один одного знаннями та досвідом,
+									щоб
+									досягти успіху в сільському господарстві.</p>
+								<p>Наш клуб - це місце, де ми надихаємося і розвиваємося разом, прагнучи інновацій та
+									процвітання
+									кожного
+									члена!”</p>
+							</div>
+							<div class="message__footer">
+								<div class="message__author">
+									<span>Джон Смит</span>
+									<p>Президент Аграрного Клуба</p>
+								</div>
+								<div class="message__logo">
+									<img src="@img/message-logo.svg" width="16" height="16" alt="logo">
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

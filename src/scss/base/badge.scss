@@ -1,0 +1,75 @@
+//==== Badge styles=============================================================================================
+
+.badge {
+	display: inline-flex;
+	align-items: center;
+	column-gap: 2px;
+	font-family: $fontFamily;
+	font-size: 10px;
+	line-height: 1;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
+	font-weight: 500;
+	border-radius: 2px;
+	padding: 4px;
+	transition: all 0.4s ease 0s;
+	&--rounded-green {
+		padding: 4px 8px;
+		border-radius: 99px;
+		background: var(--teal-500);
+	}
+	&--rounded-silver {
+		padding: 4px 8px;
+		border-radius: 99px;
+		background: var(--mint-100);
+	}
+	&--graphite {
+		color: var(--graphite-50);
+		background: var(--graphite-source);
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--mint-700);
+			}
+		}
+		&:active {
+			background: var(--graphite-500);
+		}
+	}
+	&--graphite-100 {
+		color: var(--graphite-source);
+		background: var(--graphite-100);
+		cursor: default;
+	}
+	&--teal-500 {
+		color: var(--graphite-50);
+		background: var(--teal-500);
+		cursor: default;
+	}
+	&--yellow {
+		color: var(--graphite-source);
+		background: #f0dbaf;
+		cursor: default;
+	}
+	&--green {
+		color: var(--graphite-source);
+		background: #c7dca7;
+		cursor: default;
+	}
+	&--blue {
+		color: var(--graphite-source);
+		background: #c5e4f5;
+		cursor: default;
+	}
+	&--red {
+		color: var(--graphite-50);
+		background: #b06161;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #d88282;
+			}
+		}
+		&:active {
+			background: #b04d4d;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+//==== Links styles=============================================================================================
+.link {
+	display: inline-flex;
+	width: fit-content;
+	align-items: center;
+	transition: all 0.4s ease 0s;
+	cursor: pointer;
+	font-family: "Inter", sans-serif;
+	font-weight: 400;
+	line-height: 1;
+	&--xs {
+		font-size: $fontSize;
+		letter-spacing: 0.42px;
+		color: var(--teal-500);
+		column-gap: 4px;
+		&::after,
+		&::before {
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--teal-700);
+			}
+		}
+		&:active {
+			color: var(--teal-700);
+		}
+	}
+	&--xs-white {
+		font-size: $fontSize;
+		letter-spacing: 0.42px;
+		color: var(--graphite-50);
+		column-gap: 4px;
+		&::after,
+		&::before {
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--teal-500);
+			}
+		}
+		&:active {
+			color: var(--teal-500);
+		}
+	}
+	&--s {
+		font-size: 12px;
+		letter-spacing: 0.24px;
+		column-gap: 4px;
+		text-transform: uppercase;
+		color: var(--graphite-source);
+		&::after,
+		&::before {
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--graphite-500);
+			}
+		}
+		&:active {
+			color: var(--teal-500);
+		}
+	}
+	&--l {
+		font-size: 18px;
+		letter-spacing: 0.54px;
+		column-gap: 8px;
+		color: var(--graphite-50);
+		&::after,
+		&::before {
+			font-size: 16px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--teal-500);
+			}
+		}
+		&:active {
+			color: var(--teal-500);
+		}
+	}
+	&.blocked {
+		color: var(--graphite-300);
+		pointer-events: none;
+	}
+}
