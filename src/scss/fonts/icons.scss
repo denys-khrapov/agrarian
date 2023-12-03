@@ -31,7 +31,7 @@
 ._icon-ArrowLeft:before {
 	content: "\e901";
 }
-._icon-ArrowRight:before {
+._icon-ArrowRight::after {
 	content: "\e902";
 }
 ._icon-ArrowSquareIn:before {
@@ -103,9 +103,6 @@
 }
 ._icon-PieChart:before {
 	content: "\e917";
-}
-._icon-Plus:before {
-	content: "\e918";
 }
 ._icon-Plus::after {
 	content: "\e918";

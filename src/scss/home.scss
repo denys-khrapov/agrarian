@@ -81,3 +81,15 @@
 		}
 	}
 }
+
+//==== FAQ styles=============================================================================================
+.faq {
+	padding: 32px 0 48px;
+	background: var(--Light-Background-1);
+	@media (min-width: $pc) {
+		padding: 32px 0 96px;
+	}
+	// .faq__container
+	&__container {
+	}
+}

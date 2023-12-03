@@ -199,3 +199,142 @@
 	&__logo {
 	}
 }
+
+.accordion {
+	counter-reset: item;
+	display: flex;
+	flex-direction: column;
+	row-gap: 8px;
+	// .accordion__wrapper
+	&__wrapper {
+		border-radius: 2px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		gap: 16px;
+		padding: 16px 8px;
+		position: relative;
+		transition: all 0.4s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: #fff;
+			}
+		}
+		&.accordion-active {
+			background: #fff;
+			box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+			@media (min-width: $pc) {
+				padding-bottom: 32px;
+			}
+		}
+		@media (min-width: $pc) {
+			padding: 24px 24px 12px 24px;
+		}
+	}
+	// .accordion__count
+	&__count {
+		cursor: pointer;
+		&::before {
+			content: counter(item, decimal-leading-zero);
+			counter-increment: item;
+			color: var(--teal-500);
+			font-size: 23px;
+			font-weight: 700;
+			line-height: 19px;
+			letter-spacing: 0.23px;
+		}
+	}
+	// .accordion__inner
+	&__inner {
+		width: 100%;
+		min-width: 200px;
+		max-width: 676px;
+		flex: 1 0 0;
+	}
+	// .accordion__title
+	&__title {
+		margin-top: 3px;
+		width: 100%;
+		text-align: left;
+	}
+	// .accordion__text-holder
+	&__text-holder {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
+			}
+		}
+		@media (min-width: $pc) {
+			p {
+				&:not(:last-child) {
+					margin-bottom: 16px;
+				}
+			}
+			// margin-bottom: 20px;
+		}
+	}
+
+	// .accordion__close
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		display: flex;
+		font-size: 24px;
+		transition: transform 0.4s ease 0s;
+		.accordion-active & {
+			transform: rotate(45deg);
+		}
+		@media (min-width: $pc) {
+			top: 24px;
+			right: 24px;
+		}
+	}
+
+	// .accordion__content
+	&__content {
+		margin-top: 8px;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.4s ease-out;
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+		@media (min-width: $pc) {
+			margin-top: 16px;
+		}
+	}
+	.useful-link {
+		border-radius: 2px;
+		background: #fff;
+		box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.15);
+		padding: 12px 8px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+		margin: 0 1px 8px 1px;
+		@media (min-width: $pc) {
+			row-gap: 12px;
+			padding: 24px 32px;
+			@media (min-width: $pc) {
+				margin: 0 1px 1px 1px;
+			}
+		}
+		// .useful-link__header
+		&__header {
+		}
+		// .useful-link__title
+		&__title {
+			display: flex;
+			align-items: center;
+			column-gap: 8px;
+		}
+		// .useful-link__content
+		&__content {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+	}
+}

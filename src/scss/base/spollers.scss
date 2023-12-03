@@ -3,52 +3,61 @@
 
 // Блок зі спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
 }
 // Спойлер
 .spollers__item {
-	font-size: toRem(20);
+	border-radius: 2px;
+	// padding: 21px 62px 21px 46px;
+	padding: 21px 8px;
+	position: relative;
+	transition: all 0.4s ease 0s;
+	display: flex;
+}
+.spollers__item[open] {
+	background: #fff;
+	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.spollers__wrapper {
 }
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
-	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
-	position: relative;
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+
 	&::marker {
 	}
 	._spoller-init & {
 		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			background-color: #000;
-			height: 2px;
-			width: 15px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
-		}
+		// &::before,
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	right: 10px;
+		// 	top: 50%;
+		// 	background-color: #000;
+		// 	height: 2px;
+		// 	width: 15px;
+		// 	transition: transform 0.5s ease 0s;
+		// }
+		// &::before {
+		// 	transform: translate(-75%, -50%) rotate(40deg);
+		// }
+		// &::after {
+		// 	transform: translate(0, -50%) rotate(-40deg);
+		// }
+		// &._spoller-active {
+		// 	&::before {
+		// 		transform: translateX(-75%) rotate(-40deg);
+		// 	}
+		// 	&::after {
+		// 		transform: rotate(40deg);
+		// 	}
+		// }
 		/*
 		._spoller-init & {
 			position: relative;
@@ -84,9 +93,13 @@
 		*/
 	}
 }
+
+summary::-webkit-details-marker {
+	display: none !important;
+}
+summary::marker {
+	display: none !important;
+}
 // Контент спойлера
 .spollers__body {
-	padding: toRem(20);
-	border-radius: toRem(5);
-	border: 1px solid #eee;
 }
