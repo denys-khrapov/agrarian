@@ -451,3 +451,163 @@
 		width: fit-content;
 	}
 }
+
+//==== Completed styles=============================================================================================
+.completed {
+	padding: 48px 0;
+	@media (min-width: $pc) {
+		padding: 96px 0;
+	}
+	// .completed__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		row-gap: 32px;
+		@media (min-width: $pc) {
+			row-gap: 64px;
+		}
+	}
+	// .completed__header
+	&__header {
+	}
+	// .completed__content
+	&__content {
+	}
+	// .completed__slider
+	&__slider {
+		overflow: visible;
+	}
+	// .completed__wrapper
+	&__wrapper {
+	}
+	// .completed__slide
+	&__slide {
+	}
+
+	.button {
+		display: flex;
+		margin: 16px auto 0;
+		@media (min-width: $pc) {
+			margin: 32px auto 0;
+		}
+	}
+
+	.text-block {
+		// .text-block__content
+		&__content {
+			@media (min-width: $pc) {
+				row-gap: 8px;
+			}
+		}
+	}
+}
+.container {
+}
+
+.text-holder {
+}
+.swiper {
+}
+.slider-completed {
+	// .slider-completed__nav
+	&__nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		.swiper-button-next,
+		.swiper-button-prev,
+		.swiper-scrollbar {
+			margin-top: 16px;
+			@media (min-width: $pc) {
+				margin-top: 32px;
+			}
+		}
+	}
+	// .slider-completed__scrollbar-wrapper
+	&__scrollbar-wrapper {
+		width: 100%;
+		max-width: 656px;
+		@media (min-width: $pc) {
+			max-width: 1032px;
+		}
+	}
+
+	.swiper-scrollbar {
+		position: static;
+		border-radius: 99px;
+		width: 100%;
+		background: rgba(44, 51, 51, 0.05);
+	}
+	.swiper-scrollbar-drag {
+		border-radius: 2px;
+		background: var(--graphite-600);
+	}
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.slide-completed {
+	width: 100%;
+	max-width: 294px;
+	padding: 8px;
+	transition: all 0.4s ease 0s;
+	display: block;
+	margin-right: 16px;
+	@media (min-width: $pc) {
+		max-width: 376px;
+		margin-right: 24px;
+		padding: 16px;
+	}
+	// .slide-completed__inner
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 8px;
+		@media (min-width: $pc) {
+			row-gap: 16px;
+		}
+	}
+	// .slide-completed__badge
+	&__badge {
+		cursor: default;
+		pointer-events: none;
+	}
+	// .slide-completed__text-holder
+	&__text-holder {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		align-self: stretch;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: var(--graphite-source);
+	}
+	// .slide-completed__link
+	&__link {
+	}
+}
+.badge {
+	// .badge--graphite
+	&--graphite {
+	}
+}
+._icon-Hashtag-l {
+}
+.paragraph-bold {
+}
+.link {
+	// .link--xs
+	&--xs {
+	}
+}
+._icon-Forward {
+}
+.swiper-button-prev {
+}
+.swiper-scrollbar {
+}
+.swiper-button-next {
+}

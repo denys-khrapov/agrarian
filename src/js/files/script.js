@@ -27,6 +27,26 @@ jQuery(document).ready(function ($) {
             },
          },
       });
+
+
+		let swiperCompleted = new Swiper(".slider-completed", {
+         slidesPerView: 'auto',
+         spaceBetween: 0,
+         loop: false,
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+         breakpoints: {
+            1280: {
+               spaceBetween: 0,
+            },
+         },
+      });
    }
 
 });
