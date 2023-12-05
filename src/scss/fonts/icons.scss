@@ -71,16 +71,16 @@
 ._icon-FilePdf:before {
 	content: "\e90d";
 }
-._icon-Forward:before {
+._icon-Forward::after {
 	content: "\e90e";
 }
 ._icon-Hamburger:before {
 	content: "\e90f";
 }
-._icon-Hashtag:before {
+._icon-Hashtag-l:before {
 	content: "\e910";
 }
-._icon-Hashtag:after {
+._icon-Hashtag-r:after {
 	content: "\e910";
 }
 ._icon-Home:before {
