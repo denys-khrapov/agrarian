@@ -47,6 +47,26 @@ jQuery(document).ready(function ($) {
             },
          },
       });
+
+// let mySwiper = new Swiper('.test-slider', {
+// 	slidesPerView: 1,
+// 	// Параметры слайдера
+// 	autoplay: {
+// 	  delay: 4000, // Задержка между прокруткой слайдов (4 секунды)
+// 	},
+// 	pagination: {
+// 	  el: '.swiper-pagination',
+// 	  type: 'bullets',
+// 	  clickable: true,
+// 	  // Собственный рендеринг буллетов пагинации
+// 	//   renderBullet: function (index, className) {
+// 	// 	 return '<span class="' + className + '">' + (index + 1) + '</span>';
+// 	//   },
+// 	},
+// 	// Остальные параметры...
+//  });
+ 
+		 
    }
 
 });

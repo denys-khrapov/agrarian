@@ -293,7 +293,6 @@
 }
 
 //==== Media styles=============================================================================================
-
 .media {
 	padding: 48px 0;
 	@media (min-width: $pc) {
@@ -501,13 +500,7 @@
 		}
 	}
 }
-.container {
-}
 
-.text-holder {
-}
-.swiper {
-}
 .slider-completed {
 	// .slider-completed__nav
 	&__nav {
@@ -545,10 +538,7 @@
 		background: var(--graphite-600);
 	}
 }
-.swiper-wrapper {
-}
-.swiper-slide {
-}
+
 .slide-completed {
 	width: 100%;
 	max-width: 294px;
@@ -589,25 +579,58 @@
 	&__link {
 	}
 }
-.badge {
-	// .badge--graphite
-	&--graphite {
-	}
-}
-._icon-Hashtag-l {
-}
-.paragraph-bold {
-}
-.link {
-	// .link--xs
-	&--xs {
-	}
-}
-._icon-Forward {
-}
-.swiper-button-prev {
-}
-.swiper-scrollbar {
-}
-.swiper-button-next {
-}
+
+//==== test styles=============================================================================================
+// .test {
+// 	.container {
+// 		max-width: 256px;
+// 	}
+// }
+// .test-slider {
+// 	display: flex;
+// 	flex-direction: column;
+// 	.swiper-pagination {
+// 		position: static;
+// 		display: flex;
+// 	}
+// 	.swiper-pagination-bullet {
+// 		width: 33.333%;
+// 		height: 4px;
+// 		margin: 0 4px;
+// 		font-size: 0;
+// 		background-color: red;
+// 		position: relative;
+// 	}
+// 	.swiper-pagination-bullet-active {
+// 		width: 33.333%;
+// 	}
+
+// 	.swiper-pagination-bullet::before {
+// 		content: "";
+// 		display: block;
+// 		position: absolute;
+// 		left: 0;
+// 		top: 0;
+// 		width: 0%; /* начальная ширина */
+// 		height: 100%; /* полная высота */
+// 		background-color: #000; /* черный цвет фона */
+// 		transition: width 0.5s ease; /* плавное увеличение ширины */
+// 	}
+
+// 	.swiper-pagination-bullet-active::before {
+// 		position: absolute;
+// 		width: 100%; /* полная ширина для заполнения */
+// 		animation: fillBullet 4s forwards;
+// 	}
+// }
+
+// @keyframes fillBullet {
+// 	from {
+// 		width: 0%;
+// 		background-color: transparent;
+// 	}
+// 	to {
+// 		width: 100%;
+// 		background-color: #000;
+// 	}
+// }

@@ -1,4 +1,90 @@
 <footer class="footer">
-	<div class="footer__container">
+	<div class="footer__container container">
+		<div class="footer__content">
+			<div class="footer__col">
+				<a href="#" class="footer__logo">
+					<img src="@img/logo.svg" width="105" height="30" alt="agrarian club">
+				</a>
+				<div class="footer__text-holder">
+					<p>АСОЦІАЦІЯ «АГРАРНИЙ КЛУБ»<br>
+						вул. Вокзальна, 11/1, смт Глеваха, Київська обл., 08631, Код ЄДРПОУ 45297491</p>
+				</div>
+				<div class="footer__link-box">
+					<a class="footer__link _icon-PhoneCalling" href="tel:+380665589877">+38 (066) 558 98 77</a>
+					<a class="footer__link _icon-Letter" href="mailto:agrarianclub@ukr.net">agrarianclub@ukr.net</a>
+				</div>
+			</div>
+			<div class="footer__col">
+				<div class="footer__menu-links menu-links">
+					<div class="menu-links__title _icon-ArrowUp">Клієнтам</div>
+					<ul class="menu-links__list">
+						<li><a class="link link--xs" href="#">Головна</a></li>
+						<li><a class="link link--xs" href="#">Новини та статті</a></li>
+						<li><a class="link link--xs" href="#">Контакти</a></li>
+					</ul>
+				</div>
+				<div class="footer__menu-links menu-links">
+					<div class="menu-links__title _icon-ArrowUp">Про нас</div>
+					<ul class="menu-links__list">
+						<li><a class="link link--xs" href="#">Історія компанії</a></li>
+						<li><a class="link link--xs" href="#">Наша команда</a></li>
+						<li><a class="link link--xs" href="#">Члени асоціації</a></li>
+						<li><a class="link link--xs" href="#">Партнери</a></li>
+					</ul>
+				</div>
+				<div class="footer__menu-links menu-links">
+					<div class="menu-links__title _icon-ArrowUp">Лобіювання</div>
+					<ul class="menu-links__list">
+						<li><a class="link link--xs" href="#">Підтримка АПК</a></li>
+						<li><a class="link link--xs" href="#">Земля</a></li>
+						<li><a class="link link--xs" href="#">Освіта та наука</a></li>
+						<li><a class="link link--xs" href="#">Техніка</a></li>
+						<li><a class="link link--xs" href="#">Інше</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer__col">
+				<div class="footer__form">
+					<div id="note-1"></div>
+					<form class="form" id="ajax-contact-form" data-form-validate="true">
+						<h3>Запит зв'язку</h3>
+						<div class="form__inner">
+							<div class="form__input-holder form__input-holder--phone">
+								<span>
+									<input id="phone" type="tel" value="" name="phone-client" placeholder="+38 (XXX) XXX XX XX">
+								</span>
+							</div>
+							<input type="hidden" name="url">
+							<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+							<div class="form__button-holder">
+								<button class="button button--s" type="submit">
+									Замовити дзвінок
+								</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer__copyright copyright-footer">
+			<div class="copyright-footer__logo-holder">
+				<img src="@img/logo-art.svg" width="100" height="92" alt="logo">
+			</div>
+			<div class="copyright-footer__text-holder">
+				<p>© 2023 agrarianclub.com.ua - ASSOCIATION "AGRARIAN CLUB". St. Vokzalna, 11/1, Hlevakha village,
+					Kyiv
+					region, 08631, EDRPOU code 45297491. All rights reserved.</p>
+			</div>
+		</div>
 	</div>
+	<div class="footer__bg-holder bg-holder">
+		<picture>
+			<source media="(min-width:1280px)" srcset="@img/bg-footer-desc.jpg" type="image/webp">
+			<img src="@img/bg-footer.jpg" width="1279" height="755" alt="image">
+
+		</picture>
+	</div>
+	<a class="label-agency" href="#">
+		<img src="@img/label-agency.svg" width="109" height="53" alt="shapoval agancy">
+	</a>
 </footer>
