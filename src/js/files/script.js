@@ -48,6 +48,27 @@ jQuery(document).ready(function ($) {
          },
       });
 
+		let swiperOffers = new Swiper(".slider-offers", {
+         slidesPerView: 'auto',
+			initialSlide: 1,
+         spaceBetween: 16,
+         loop: false,
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+         breakpoints: {
+            1280: {
+               spaceBetween: 24,
+					// slidesPerView: 'auto',
+            },
+         },
+      });
+
 // let mySwiper = new Swiper('.test-slider', {
 // 	slidesPerView: 1,
 // 	// Параметры слайдера

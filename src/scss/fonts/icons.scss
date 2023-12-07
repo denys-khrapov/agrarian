@@ -25,13 +25,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-._icon-ArrowDownRight:before {
+._icon-ArrowDownRight:after {
 	content: "\e900";
 }
 ._icon-ArrowLeft::before {
 	content: "\e901";
 }
-._icon-ArrowRight::after {
+._icon-ArrowRight::before {
 	content: "\e902";
 }
 ._icon-ArrowSquareIn::after {
