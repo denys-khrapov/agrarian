@@ -79,10 +79,13 @@
 
 .switcher {
 	min-width: 256px;
+	flex: 1 0 0;
 	display: flex;
+	flex-wrap: wrap;
 	gap: 8px;
 	@media (min-width: $pc) {
 		gap: 16px;
+		justify-content: flex-end;
 	}
 	// .switcher__item
 	&__item {
