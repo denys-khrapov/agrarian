@@ -90,6 +90,46 @@ jQuery(document).ready(function ($) {
 		 
    }
 
+// $(document).ready(function() {
+// 	// Изначально вычисляем и сохраняем max-height для каждого элемента .item-news__text-holder-js
+// 	$('.item-news__text-holder-js').each(function() {
+// 		 var initialMaxHeight = $(this).css('max-height');
+// 		 $(this).data('initialMaxHeight', initialMaxHeight);
+// 	});
+
+// 	// Устанавливаем обработчик событий hover на родительский элемент .item-news
+// 	$('.item-news').hover(
+// 		 function() {
+// 			  // При наведении мыши
+// 			  var textHolder = $(this).find('.item-news__text-holder-js');
+// 			  textHolder.css('max-height', '160px'); // Устанавливаем max-height на большее значение
+// 		 },
+// 		 function() {
+// 			  // При уходе мыши
+// 			  var textHolder = $(this).find('.item-news__text-holder-js');
+// 			  var initialMaxHeight = textHolder.data('initialMaxHeight');
+// 			  textHolder.css('max-height', initialMaxHeight); // Возвращаем max-height к исходному значению
+// 		 }
+// 	);
+// });
+
+$(document).ready(function() {
+	let windowWidth = $(window).width();
+	if(windowWidth >= 1280) {
+	$('.item-news').hover(
+		 function() { // При наведении курсора
+			  $(this).find('.item-news__text-holder-js').css('max-height', '158px'); // Увеличиваем высоту
+		 },
+		 function() { // Когда курсор убирается
+			  $(this).find('.item-news__text-holder-js').css('max-height', '80px'); // Возвращаем начальную высоту
+		 }
+	);
+		} else{
+			
+		}
+});
+
+
 });
 
 
