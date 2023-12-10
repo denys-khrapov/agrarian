@@ -6,7 +6,7 @@ import { flsModules } from "./modules.js";
 
 jQuery(document).ready(function ($) {
    initSwiper();
-
+	initHoverNewsCard();
 
 	function initSwiper() {
 
@@ -69,6 +69,35 @@ jQuery(document).ready(function ($) {
          },
       });
 
+		var swiperHero = new Swiper('.slider-hero', {
+			slidesPerView: 1,
+			spaceBetween: 16,
+			effect: 'fade',
+			loop: true,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+			pagination: {
+				el: '.swiper-pagination',
+					clickable: true,
+			},
+			on: {
+			init: function () {
+				const slide = this.slides[this.activeIndex];
+				this.el.style.backgroundImage = `url(${slide.dataset.background})`;
+				checkSwiperButtons();
+			},
+			slideChange: function () {
+				const slide = this.slides[this.activeIndex];
+				this.el.style.backgroundImage = `url(${slide.dataset.background})`;
+	
+			}
+			}
+	
+			
+		});
+
 // let mySwiper = new Swiper('.test-slider', {
 // 	slidesPerView: 1,
 // 	// Параметры слайдера
@@ -86,51 +115,41 @@ jQuery(document).ready(function ($) {
 // 	},
 // 	// Остальные параметры...
 //  });
- 
-		 
+
    }
 
-// $(document).ready(function() {
-// 	// Изначально вычисляем и сохраняем max-height для каждого элемента .item-news__text-holder-js
-// 	$('.item-news__text-holder-js').each(function() {
-// 		 var initialMaxHeight = $(this).css('max-height');
-// 		 $(this).data('initialMaxHeight', initialMaxHeight);
-// 	});
+	function initHoverNewsCard(){
+		let windowWidth = $(window).width();
+		if(windowWidth >= 1280) {
+		$('.item-news').hover(
+			 function() { // При наведении курсора
+				  $(this).find('.item-news__text-holder-js').css('max-height', '158px'); // Увеличиваем высоту
+			},
+			 function() { // Когда курсор убирается
+				  $(this).find('.item-news__text-holder-js').css('max-height', '80px'); // Возвращаем начальную высоту
+			}
+		);
+			} else{
+				
+			}
+	}
 
-// 	// Устанавливаем обработчик событий hover на родительский элемент .item-news
-// 	$('.item-news').hover(
-// 		 function() {
-// 			  // При наведении мыши
-// 			  var textHolder = $(this).find('.item-news__text-holder-js');
-// 			  textHolder.css('max-height', '160px'); // Устанавливаем max-height на большее значение
-// 		 },
-// 		 function() {
-// 			  // При уходе мыши
-// 			  var textHolder = $(this).find('.item-news__text-holder-js');
-// 			  var initialMaxHeight = textHolder.data('initialMaxHeight');
-// 			  textHolder.css('max-height', initialMaxHeight); // Возвращаем max-height к исходному значению
-// 		 }
-// 	);
-// });
+	function checkSwiperButtons() {
+		var nextButton = $('.slider-hero .swiper-button-next');
+		var prevButton = $('.slider-hero .swiper-button-prev');
+		var sliderHero = $('.slider-hero');
 
-$(document).ready(function() {
-	let windowWidth = $(window).width();
-	if(windowWidth >= 1280) {
-	$('.item-news').hover(
-		 function() { // При наведении курсора
-			  $(this).find('.item-news__text-holder-js').css('max-height', '158px'); // Увеличиваем высоту
-		 },
-		 function() { // Когда курсор убирается
-			  $(this).find('.item-news__text-holder-js').css('max-height', '80px'); // Возвращаем начальную высоту
-		 }
-	);
-		} else{
-			
+
+		if (nextButton.length && prevButton.length && sliderHero.length) {
+			 if (nextButton.hasClass('swiper-button-lock') || prevButton.hasClass('swiper-button-lock')) {
+				  sliderHero.addClass('not-slider');
+			 } else {
+				  sliderHero.removeClass('not-slider');
+			 }
 		}
+	}
 });
 
-
-});
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -182,6 +201,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			  accordionWrapper.classList.add("accordion-active");
 		 }
 	}
-	
-	
+
 });
+
