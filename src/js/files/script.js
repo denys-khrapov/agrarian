@@ -28,7 +28,6 @@ jQuery(document).ready(function ($) {
          },
       });
 
-
 		let swiperCompleted = new Swiper(".slider-completed", {
          slidesPerView: 'auto',
          spaceBetween: 0,
@@ -69,7 +68,45 @@ jQuery(document).ready(function ($) {
          },
       });
 
-		var swiperHero = new Swiper('.slider-hero', {
+		let swiperCarousel = new Swiper(".slider-carousel", {
+         slidesPerView: 'auto',
+         spaceBetween: 16,
+         loop: false,
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+         breakpoints: {
+            1280: {
+               spaceBetween: 24,
+            },
+         },
+      });
+
+		let swiperCarouselInner = new Swiper(".slider-carousel-inner", {
+         slidesPerView: 1,
+         loop: true,
+			speed: 1000,
+			effect: 'fade',
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+					clickable: true,
+			},
+         breakpoints: {
+            1280: {
+            },
+         },
+      });
+
+		let swiperHero = new Swiper('.slider-hero', {
 			slidesPerView: 1,
 			spaceBetween: 16,
 			effect: 'fade',
@@ -97,25 +134,6 @@ jQuery(document).ready(function ($) {
 	
 			
 		});
-
-// let mySwiper = new Swiper('.test-slider', {
-// 	slidesPerView: 1,
-// 	// Параметры слайдера
-// 	autoplay: {
-// 	  delay: 4000, // Задержка между прокруткой слайдов (4 секунды)
-// 	},
-// 	pagination: {
-// 	  el: '.swiper-pagination',
-// 	  type: 'bullets',
-// 	  clickable: true,
-// 	  // Собственный рендеринг буллетов пагинации
-// 	//   renderBullet: function (index, className) {
-// 	// 	 return '<span class="' + className + '">' + (index + 1) + '</span>';
-// 	//   },
-// 	},
-// 	// Остальные параметры...
-//  });
-
    }
 
 	function initHoverNewsCard(){

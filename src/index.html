@@ -9,19 +9,6 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
-			<!-- <section class="test" id="test-section">
-				<div class="container">
-					<div class="test__slider swiper test-slider">
-						<div class="test__wrapper swiper-wrapper">
-							<div class="test__slide swiper-slide">slide1</div>
-							<div class="test__slide swiper-slide">slide2</div>
-							<div class="test__slide swiper-slide">slide3</div>
-						</div>
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-			</section> -->
-
 			<section class="hero" id="hero-section">
 				<div class="hero__container container">
 					<div class="hero__left-col">
@@ -47,7 +34,7 @@
 						<div class="hero__slider swiper slider-hero">
 							<div class="hero__wrapper swiper-wrapper">
 								<div class="hero__slide swiper-slide slide-hero" data-background="@img/hero-slide-img-01.jpg">
-									<div class="slide-hero__inner">
+									<a href="#" class="slide-hero__inner">
 										<div class="slide-hero__header">
 											<div class="badge badge--yellow">стаття</div>
 											<div class="badge badge--graphite _icon-Hashtag-l">ОСВІТА ТА НАУКА</div>
@@ -64,11 +51,11 @@
 												</p>
 											</div>
 										</div>
-										<a href="#" class="link link--xs _icon-Forward">Читати далі</a>
-									</div>
+										<span class="link link--xs _icon-Forward">Читати далі</span>
+									</a>
 								</div>
 								<div class="hero__slide swiper-slide slide-hero" data-background="@img/hero-slide-img-02.jpg">
-									<div class="slide-hero__inner">
+									<a href="#" class="slide-hero__inner">
 										<div class="slide-hero__header">
 											<div class="badge badge--green">новина</div>
 											<div class="badge badge--graphite _icon-Hashtag-l">ОСВІТА ТА НАУКА</div>
@@ -87,11 +74,11 @@
 												</p>
 											</div>
 										</div>
-										<a href="#" class="link link--xs _icon-Forward">Читати далі</a>
-									</div>
+										<span class="link link--xs _icon-Forward">Читати далі</span>
+									</a>
 								</div>
 								<div class="hero__slide swiper-slide slide-hero" data-background="@img/hero-slide-img-03.jpg">
-									<div class="slide-hero__inner">
+									<a href="#" class="slide-hero__inner">
 										<div class="slide-hero__header">
 											<div class="badge badge--yellow">стаття</div>
 											<div class="badge badge--graphite _icon-Hashtag-l">ЗЕМЛЯ</div>
@@ -109,8 +96,8 @@
 												</p>
 											</div>
 										</div>
-										<a href="#" class="link link--xs _icon-Forward">Читати далі</a>
-									</div>
+										<span class="link link--xs _icon-Forward">Читати далі</span>
+									</a>
 								</div>
 							</div>
 							<div class="hero__nav">
@@ -126,6 +113,256 @@
 						<source media="(min-width:1280px)" srcset="@img/bg-hero-desc.jpg" type="image/webp">
 						<img src="@img/bg-hero.jpg" width="1279" height="760" alt="image">
 					</picture>
+				</div>
+			</section>
+
+			<section class="carousel" id="carousel-section">
+				<div class="carousel__container container">
+					<div class="carousel__content">
+						<div class="carousel__slider swiper slider-carousel">
+							<div class="carousel__wrapper swiper-wrapper">
+								<div class="carousel__slide swiper-slide slide-carousel slide-carousel--gradient">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												про компанію
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__announcement">
+												<p>Дізнайтеся більше про нашу компанію та наші цінності</p>
+											</div>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+									<div class="slide-carousel__bg-holder">
+										<video src="files/carousel.mp4" autoplay muted loop preload="auto" playsinline></video>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												новини та статті
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__announcement">
+												<p>Слідкуйте за останніми новинами та подіями компанії</p>
+											</div>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+									<div class="carousel-inner__slider swiper slider-carousel-inner">
+										<div class="carousel-inner__wrapper swiper-wrapper">
+											<div
+												class="carousel-inner__slide swiper-slide slide-carousel-inner slide-carousel-inner--gradient">
+												<div class="slide-carousel-inner__image-holder">
+													<img src="@img/carousel-img-01.jpg" width="256" height="256" alt="image">
+												</div>
+											</div>
+											<div
+												class="carousel-inner__slide swiper-slide slide-carousel-inner slide-carousel-inner--gradient">
+												<div class="slide-carousel-inner__image-holder">
+													<img src="@img/carousel-img-02.jpg" width="256" height="256" alt="image">
+												</div>
+											</div>
+											<div
+												class="carousel-inner__slide swiper-slide slide-carousel-inner slide-carousel-inner--gradient">
+												<div class="slide-carousel-inner__image-holder">
+													<img src="@img/carousel-img-03.jpg" width="256" height="256" alt="image">
+												</div>
+											</div>
+										</div>
+										<div class="carousel-inner__nav">
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel slide-carousel--green">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												лобіювання
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__update">
+												останні оновлення
+											</div>
+											<div class="slide-carousel__card card">
+												<div class="card__badge-box">
+													<div class="badge badge--graphite-100">Завершено</div>
+													<div class="badge badge--graphite _icon-Hashtag-l">ОСВІТА ТА НАУКА</div>
+												</div>
+												<div class="card__text-holder paragraph-bold">
+													<p>Проект Закону «Про внесення змін до Податкового кодексу України щодо
+														удосконалення правового регулювання страхування сільськогосподарської
+														продукції з державною підтримкою»</p>
+												</div>
+											</div>
+											<div class="slide-carousel__card card">
+												<div class="card__badge-box">
+													<div class="badge badge--teal-500">в роботі</div>
+													<div class="badge badge--graphite _icon-Hashtag-l">ОСВІТА ТА НАУКА</div>
+												</div>
+												<div class="card__text-holder paragraph-bold">
+													<p>Проект Закону «Про внесення змін до Податкового кодексу України щодо ставки
+														податку на додану вартість з операцій з постачання окремих видів
+														сільськогосподарської продукції»</p>
+												</div>
+											</div>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel slide-carousel--blue">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												контакти
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__text-holder paragraph">
+												<p>вул. Вокзальна, 11/1, смт Глеваха,
+													Київська обл., 08631</p>
+											</div>
+											<a class="slide-carousel__phone link link--xs-white" href="tel:+380665589877">+38 (066)
+												558 98
+												77</a>
+											<a class="slide-carousel__mail link link--xs-white"
+												href="mailto:agrarianclub@ukr.net">agrarianclub@ukr.net</a>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel slide-carousel--gradient">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												про компанію
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__announcement">
+												<p>Дізнайтеся більше про нашу компанію та наші цінності</p>
+											</div>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+									<div class="slide-carousel__bg-holder">
+										<video src="files/carousel.mp4" autoplay muted loop preload="auto" playsinline></video>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												новини та статті
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__announcement">
+												<p>Слідкуйте за останніми новинами та подіями компанії</p>
+											</div>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+									<div class="carousel-inner__slider swiper slider-carousel-inner">
+										<div class="carousel-inner__wrapper swiper-wrapper">
+											<div
+												class="carousel-inner__slide swiper-slide slide-carousel-inner slide-carousel-inner--gradient">
+												<div class="slide-carousel-inner__image-holder">
+													<img src="@img/carousel-img-01.jpg" width="256" height="256" alt="image">
+												</div>
+											</div>
+											<div
+												class="carousel-inner__slide swiper-slide slide-carousel-inner slide-carousel-inner--gradient">
+												<div class="slide-carousel-inner__image-holder">
+													<img src="@img/carousel-img-02.jpg" width="256" height="256" alt="image">
+												</div>
+											</div>
+											<div
+												class="carousel-inner__slide swiper-slide slide-carousel-inner slide-carousel-inner--gradient">
+												<div class="slide-carousel-inner__image-holder">
+													<img src="@img/carousel-img-03.jpg" width="256" height="256" alt="image">
+												</div>
+											</div>
+										</div>
+										<div class="carousel-inner__nav">
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel slide-carousel--green">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												лобіювання
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__update">
+												останні оновлення
+											</div>
+											<div class="slide-carousel__card card">
+												<div class="card__badge-box">
+													<div class="badge badge--graphite-100">Завершено</div>
+													<div class="badge badge--graphite _icon-Hashtag-l">ОСВІТА ТА НАУКА</div>
+												</div>
+												<div class="card__text-holder paragraph-bold">
+													<p>Проект Закону «Про внесення змін до Податкового кодексу України щодо
+														удосконалення правового регулювання страхування сільськогосподарської
+														продукції з державною підтримкою»</p>
+												</div>
+											</div>
+											<div class="slide-carousel__card card">
+												<div class="card__badge-box">
+													<div class="badge badge--teal-500">в роботі</div>
+													<div class="badge badge--graphite _icon-Hashtag-l">ОСВІТА ТА НАУКА</div>
+												</div>
+												<div class="card__text-holder paragraph-bold">
+													<p>Проект Закону «Про внесення змін до Податкового кодексу України щодо ставки
+														податку на додану вартість з операцій з постачання окремих видів
+														сільськогосподарської продукції»</p>
+												</div>
+											</div>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+								</div>
+								<div class="carousel__slide swiper-slide slide-carousel slide-carousel--blue">
+									<div class="slide-carousel__inner">
+										<div class="slide-carousel__header">
+											<div class="slide-carousel__badge-rounded badge-rounded">
+												контакти
+											</div>
+										</div>
+										<div class="slide-carousel__content">
+											<div class="slide-carousel__text-holder paragraph">
+												<p>вул. Вокзальна, 11/1, смт Глеваха,
+													Київська обл., 08631</p>
+											</div>
+											<a class="slide-carousel__phone link link--xs-white" href="tel:+380665589877">+38 (066)
+												558 98
+												77</a>
+											<a class="slide-carousel__mail link link--xs-white"
+												href="mailto:agrarianclub@ukr.net">agrarianclub@ukr.net</a>
+										</div>
+										<a class="link link--xs-white _icon-ArrowDownRight" href="#">Перейти до розділу</a>
+									</div>
+								</div>
+							</div>
+							<div class="slider-carousel__nav">
+								<button type="button" class="swiper-button-prev _icon-ArrowLeft"></button>
+								<div class="slider-carousel__scrollbar-wrapper">
+									<div class="swiper-scrollbar"></div>
+								</div>
+								<button type="button" class="swiper-button-next _icon-ArrowRight"></button>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 

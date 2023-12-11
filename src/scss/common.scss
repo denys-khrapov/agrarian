@@ -405,3 +405,32 @@
 		}
 	}
 }
+
+.card {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+	padding: 8px;
+	// .card__badge-box
+	&__badge-box {
+		display: flex;
+		align-items: center;
+		column-gap: 8px;
+	}
+	// .card__text-holder
+	&__text-holder {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		align-self: stretch;
+		overflow: hidden;
+		color: var(--graphite-50);
+		text-overflow: ellipsis;
+		font-size: 13px;
+		font-weight: 600;
+		line-height: 1.4;
+		@media (min-width: $pc) {
+			font-size: 14px;
+		}
+	}
+}
