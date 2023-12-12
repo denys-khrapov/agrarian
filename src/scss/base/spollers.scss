@@ -6,16 +6,18 @@
 }
 // Спойлер
 .spollers__item {
-	border-radius: 2px;
-	// padding: 21px 62px 21px 46px;
-	padding: 21px 8px;
 	position: relative;
 	transition: all 0.4s ease 0s;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@media (min-width: $pc) {
+		// position: static;
+	}
 }
 .spollers__item[open] {
-	background: #fff;
-	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+	// background: #fff;
+	// box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
 .spollers__wrapper {
@@ -23,12 +25,28 @@
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
+	margin: 0 auto;
 	cursor: default;
-	text-align: left;
 	list-style: none;
 	display: flex;
-	flex-wrap: wrap;
-
+	align-items: center;
+	column-gap: 4px;
+	padding: 10px 16px;
+	border-radius: 99px;
+	background: var(--graphite-source);
+	box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.05);
+	@media (min-width: $pc) {
+		cursor: pointer;
+		&.active {
+			&::after {
+				transform: rotate(45deg);
+			}
+		}
+	}
+	&::after {
+		font-size: 12px;
+		transition: all 0.4s ease 0s;
+	}
 	&::marker {
 	}
 	._spoller-init & {
@@ -50,47 +68,42 @@
 		// &::after {
 		// 	transform: translate(0, -50%) rotate(-40deg);
 		// }
-		// &._spoller-active {
-		// 	&::before {
-		// 		transform: translateX(-75%) rotate(-40deg);
-		// 	}
-		// 	&::after {
-		// 		transform: rotate(40deg);
-		// 	}
-		// }
-		/*
+		&._spoller-active {
+			&::after {
+				transform: rotate(45deg);
+			}
+		}
 		._spoller-init & {
 			position: relative;
 			width: 100%;
 			text-align: left;
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				right: 0;
-				top: toRem(12);
-				height: toRem(1);
-				transition: all 0.3s ease 0s;
-				width: toRem(10);
-				background-color: #000;
-			}
-			&::before {
-				transform: rotate(40deg);
-				right: toRem(7);
-			}
-			&::after {
-				transform: rotate(-40deg);
-			}
+			// &::before,
+			// &::after {
+			// 	content: "";
+			// 	position: absolute;
+			// 	right: 0;
+			// 	top: toRem(12);
+			// 	height: toRem(1);
+			// 	transition: all 0.3s ease 0s;
+			// 	width: toRem(10);
+			// 	background-color: #000;
+			// }
+			// &::before {
+			// 	transform: rotate(40deg);
+			// 	right: toRem(7);
+			// }
+			// &::after {
+			// 	transform: rotate(-40deg);
+			// }
 		}
 		&._spoller-active {
-			&::before {
-				transform: rotate(-40deg);
-			}
-			&::after {
-				transform: rotate(40deg);
-			}
+			// &::before {
+			// 	transform: rotate(-40deg);
+			// }
+			// &::after {
+			// 	transform: rotate(40deg);
+			// }
 		}
-		*/
 	}
 }
 
@@ -102,4 +115,18 @@ summary::marker {
 }
 // Контент спойлера
 .spollers__body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 8px;
+	margin-top: 24px;
+	@media (min-width: $pc) {
+		display: none;
+	}
+	.menu__link {
+		padding: 10px 16px;
+		border-radius: 99px;
+		background: var(--graphite-source);
+		box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.05);
+	}
 }
