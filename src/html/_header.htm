@@ -1,30 +1,31 @@
 <header class="header">
 	<div class="header__container container">
-		<a href="#" class="header__logo">
+		<a href="/" class="header__logo">
 			<img src="@img/logo.svg" width="70" height="20" alt="logo">
 		</a>
 		<div class="header__menu">
 			<nav class="menu__body">
 				<ul id="menu-main-menu" class="menu__list menu sf-menu">
 					<li class="menu-item  current-menu-item current_page_item menu__item">
-						<a class="menu__link" href="#" aria-current="page">Головна</a>
+						<a class="menu__link" href="/" aria-current="page">Головна</a>
 					</li>
-					<li data-spollers="1279" data-spollers class="spollers">
+					<li data-spollers="1279" class="spollers">
 						<details class="spollers__item">
 							<summary class="spollers__title menu__link _icon-Plus">
 								про компанію
 							</summary>
 							<div class="spollers__body">
-								<a class="menu__link" href="#">історія та команда</a>
+								<a class="menu__link" href="#">історія компанії</a>
+								<a class="menu__link" href="#">наша команда</a>
 								<a class="menu__link" href="#">члени асоціації</a>
 								<a class="menu__link" href="#">партнери</a>
 							</div>
 							<div class="submenu submenu--company">
 								<div class="submenu__container">
-									<a class="submenu__link" href="#">історія та команда</a>
+									<a class="submenu__link" href="#">історія компанії</a>
+									<a class="submenu__link" href="#">наша команда</a>
 									<a class="submenu__link" href="#">члени асоціації</a>
 									<a class="submenu__link" href="#">партнери</a>
-									<a class="submenu__link" href="#">контакти</a>
 								</div>
 							</div>
 						</details>
@@ -32,7 +33,7 @@
 					<li class="menu-item menu__item">
 						<a class="menu__link" href="#">новини та статті</a>
 					</li>
-					<li data-spollers="1279" data-spollers class="spollers">
+					<li data-spollers="1279" class="spollers">
 						<details class="spollers__item">
 							<summary class="spollers__title menu__link _icon-Plus">
 								лобіювання
@@ -70,7 +71,8 @@
 						<button class="search-btn _icon-Search" type="button">
 						</button>
 					</form>
-					<a class="button button--m-teal" href="#">консультація</a>
+					<a class="button button--m-teal" data-fancybox data-src="#consultation-modal"
+						href="javascript:;">консультація</a>
 				</div>
 				<div class="header__contacts contacts">
 					<div class="contacts__text-holder">
@@ -101,6 +103,4 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- <div class="submenu submenu--lobbying"></div> -->
 </header>

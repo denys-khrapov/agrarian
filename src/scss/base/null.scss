@@ -29,6 +29,7 @@ body {
 	font-size: $fontSize;
 	background: var(--Light-Background-1);
 	//text-rendering: optimizeLegibility;
+	overflow-y: scroll;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
@@ -65,4 +66,30 @@ h5,
 h6 {
 	font-weight: inherit;
 	font-size: inherit;
+}
+
+::-webkit-scrollbar {
+	@media (min-width: $pc) {
+		width: 8px;
+	}
+}
+
+::-webkit-scrollbar-track {
+	@media (min-width: $pc) {
+		background: var(--graphite-source);
+	}
+}
+
+::-webkit-scrollbar-thumb {
+	@media (min-width: $pc) {
+		transition: background 0.4s ease 0s;
+		background: var(--teal-source);
+		border-radius: 10px;
+	}
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@media (min-width: $pc) {
+		background: var(--graphite-700);
+	}
 }

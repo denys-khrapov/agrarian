@@ -1,27 +1,22 @@
 //==== Hero styles=============================================================================================
 .hero {
 	position: relative;
-	padding: 80px 0 192px;
+	padding: 58px 0 192px;
 	@media (min-width: $pc) {
 		padding: 0;
 		margin-top: 80px;
 	}
 
 	#video-mask {
-		// width: 183px;
-		// height: 164px;
-		width: 163px;
-		height: 135px;
+		width: 180px;
+		height: 160px;
 		mask-image: url("../img/hero-art-logo.svg");
 		mask-mode: alpha;
 		mask-size: contain;
 		mask-repeat: no-repeat;
 		@media (min-width: $pc) {
-			// width: 100%;
-			// height: 100%;
-			width: 308px;
-			height: 267px;
-			mask-size: cover;
+			width: 393px;
+			height: 332px;
 		}
 	}
 	// .hero__container
@@ -50,23 +45,26 @@
 			padding-right: 112px;
 			padding-top: 182px;
 			text-align: left;
+			// width: 100%;
+			// max-width: 984px;
 			flex: none;
 			width: 50%;
 		}
+		// @media (min-width: 1921px) {
+		// 	width: 51.75%;
+		// }
 	}
 	// .hero__logo
 	&__logo {
 		&:not(:last-child) {
-			margin-bottom: 32px;
+			margin-bottom: 24px;
 		}
 		@media (min-width: $pc) {
 			position: absolute;
 			z-index: 3;
-			top: 199px;
-			left: 50%;
+			top: 171px;
+			left: 50.69%;
 			transform: translateX(-50%);
-			// width: 308px;
-			// height: 267px;
 			&:not(:last-child) {
 				margin-bottom: 0px;
 			}
@@ -128,9 +126,14 @@
 		flex: 1 0 0;
 		min-width: 256px;
 		@media (min-width: $pc) {
+			// width: 100%;
+			// max-width: 936px;
 			flex: none;
 			width: 50%;
 		}
+		// @media (min-width: 1921px) {
+		// 	width: 48.75%;
+		// }
 	}
 	// .hero__slider
 	&__slider {
@@ -306,7 +309,7 @@
 	}
 	// .carousel__container
 	&__container {
-		max-width: 1136px;
+		max-width: 1280px;
 	}
 	// .carousel__content
 	&__content {
@@ -332,7 +335,14 @@
 		justify-content: space-between;
 		gap: 16px;
 		max-width: 800px;
-		margin: 0 auto;
+		margin: 0 -32px;
+		@media (min-width: 375px) {
+			margin: 0 auto;
+		}
+		@media (min-width: $pc) {
+			margin: unset;
+			max-width: 100%;
+		}
 		.swiper-button-next,
 		.swiper-button-prev,
 		.swiper-scrollbar {
@@ -617,7 +627,7 @@
 
 //==== Feature styles=============================================================================================
 .feature {
-	padding: 56px 0 48px;
+	padding: 53px 0 48px;
 	@media (min-width: $pc) {
 		padding: 81px 0 96px;
 	}
@@ -773,6 +783,8 @@
 		@media (min-width: $pc) {
 			width: 48px;
 			height: 48px;
+			top: 16px;
+			transform: translateY(0);
 			left: 24px;
 			font-size: 24px;
 		}
@@ -832,6 +844,7 @@
 		gap: 8px;
 		@media (min-width: $pc) {
 			height: auto;
+			width: 100%;
 		}
 	}
 	// .tabs__image-holder
@@ -860,6 +873,9 @@
 				animation: bounceEffect 1s;
 			}
 		}
+		@media (min-width: $pc) {
+			height: 381px;
+		}
 	}
 	@keyframes bounceEffect {
 		from {
@@ -885,7 +901,7 @@
 
 //==== Banner styles=============================================================================================
 .banner {
-	padding: 32px 0 48px;
+	padding: 29px 0 48px;
 	@media (min-width: $pc) {
 		padding: 48px 0 96px;
 	}
@@ -986,7 +1002,7 @@
 	background: var(--Light-Background-2);
 	padding: 48px 0;
 	@media (min-width: $pc) {
-		padding: 96px 0;
+		padding: 93px 0 96px;
 	}
 	// .news__container
 	&__container {
@@ -999,6 +1015,9 @@
 	}
 	// .news__header
 	&__header {
+		@media (min-width: $pc) {
+			padding: 0 42.5px;
+		}
 	}
 	// .news__content
 	&__content {
@@ -1018,12 +1037,25 @@
 	// .news__item
 	&__item {
 	}
+	.button.button--m {
+		@media (max-width: 1279px) {
+			column-gap: 4px;
+			font-size: 14px;
+			line-height: 1;
+			letter-spacing: 0.42px;
+			padding: 9px 16px;
+		}
+	}
+	.text-block {
+		padding-left: 24px;
+	}
 }
 
 .news-items {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 16px;
+	row-gap: 24px;
 	@media (min-width: $pc) {
 		gap: 24px;
 	}
@@ -1091,6 +1123,7 @@
 				left: 32px;
 				width: 100%;
 				max-width: 312px;
+				row-gap: 16px;
 			}
 		}
 		// .item-news__date
@@ -1186,6 +1219,7 @@
 			flex-direction: row;
 			transition: background 0.4s ease 0s;
 			@media (min-width: $pc) {
+				min-height: auto;
 				gap: 24px;
 				padding: 16px;
 				border-radius: 4px;
@@ -1361,7 +1395,7 @@
 
 //==== Projects styles=============================================================================================
 .projects {
-	padding: 48px 0;
+	padding: 48px 0 47px;
 	@media (min-width: $pc) {
 		padding: 96px 0;
 	}
@@ -1376,6 +1410,9 @@
 	}
 	// .projects__header
 	&__header {
+		@media (min-width: $pc) {
+			padding: 0 24px;
+		}
 	}
 	// .projects__content
 	&__content {
@@ -1400,6 +1437,9 @@
 	&__item {
 	}
 	.text-block {
+		@media (min-width: $pc) {
+			padding-left: 24px;
+		}
 		// .text-block__content
 		&__content {
 			@media (min-width: $pc) {
@@ -1495,7 +1535,7 @@
 	padding: 11px 0 48px;
 	position: relative;
 	@media (min-width: $pc) {
-		padding: 27px 0 64px;
+		padding: 22px 0 64px;
 	}
 	// .offers__container
 	&__container {
@@ -1555,10 +1595,12 @@
 		line-height: 1.2;
 		letter-spacing: 0.11px;
 		max-width: 530px;
+		padding: 0 24px;
 		&:not(:last-child) {
-			margin-bottom: 8px;
+			margin-bottom: 6px;
 		}
 		@media (min-width: $pc) {
+			padding: 0;
 			font-size: 16px;
 			line-height: 1.4;
 			letter-spacing: 0.16px;
@@ -1934,7 +1976,7 @@
 
 //==== FAQ styles=============================================================================================
 .faq {
-	padding: 32px 0 48px;
+	padding: 32px 0 44px;
 	@media (min-width: $pc) {
 		padding: 32px 0 96px;
 	}
@@ -1945,7 +1987,7 @@
 
 //==== Reviews styles=============================================================================================
 .reviews {
-	padding: 48px 0;
+	padding: 46px 0 48px;
 	background: var(--Light-Background-2);
 	@media (min-width: $pc) {
 		padding: 96px 0;
@@ -1970,7 +2012,10 @@
 	&__content {
 		display: flex;
 		flex-direction: column;
-		row-gap: 32px;
+		row-gap: 28px;
+		@media (min-width: $pc) {
+			row-gap: 32px;
+		}
 	}
 	// .reviews__items
 	&__items {
@@ -1985,7 +2030,7 @@
 	&__item {
 		min-width: 256px;
 		flex: 1 0 0;
-		padding: 16px;
+		padding: 15.5px 16px;
 		display: flex;
 		flex-direction: column;
 		row-gap: 16px;
@@ -2113,6 +2158,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 16px;
+		row-gap: 15px;
 		@media (min-width: $pc) {
 			column-gap: 24px;
 		}
@@ -2127,6 +2173,7 @@
 		// .text-block__content
 		&__content {
 			@media (min-width: $pc) {
+				row-gap: 8px;
 			}
 		}
 	}
@@ -2138,6 +2185,7 @@
 	padding: 8px;
 	display: flex;
 	gap: 12px;
+	column-gap: 14px;
 	border-radius: 2px;
 	transition: background 0.4s ease 0s;
 	@media (min-width: $pc) {
@@ -2248,7 +2296,7 @@
 
 //==== Completed styles=============================================================================================
 .completed {
-	padding: 48px 0;
+	padding: 48px 0 47px;
 	@media (min-width: $pc) {
 		padding: 96px 0;
 	}

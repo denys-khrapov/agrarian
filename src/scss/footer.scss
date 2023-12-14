@@ -196,9 +196,14 @@
 		}
 		// .form__inner
 		&__inner {
+			flex-wrap: wrap;
+			flex-direction: row;
+			gap: 12px;
 		}
 		// .form__input-holder
 		&__input-holder {
+			min-width: 224px;
+			flex: 1 0 0;
 			span {
 				display: block;
 				width: 100%;
@@ -243,7 +248,9 @@
 		}
 		// .form__button-holder
 		&__button-holder {
-			margin-top: 12px;
+			min-width: 224px;
+			flex: 1 0 0;
+			// margin-top: 12px;
 			.button {
 				width: 100%;
 				justify-content: center;
@@ -255,6 +262,7 @@
 		position: absolute;
 		bottom: 0;
 		right: 0;
+		z-index: 1;
 	}
 }
 
