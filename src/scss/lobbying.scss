@@ -1,6 +1,7 @@
 //==== Lobbying styles=============================================================================================
 
 .seo {
+	background: #fff;
 	padding: 48px 0;
 	// .seo__container
 	&__container {
@@ -28,8 +29,7 @@
 		}
 	}
 }
-.container {
-}
+
 .seo-block {
 	display: flex;
 	flex-direction: column;
