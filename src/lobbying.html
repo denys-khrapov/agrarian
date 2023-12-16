@@ -316,22 +316,8 @@
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
-		<div style="display: none;" id="thank-modal" class="thank-modal">
-			<div class="thank-modal__inner">
-				<div class="thank-modal__left-col">
-					<div class="thank-modal__icon-holder">
-						<img src="@img/check-icon.svg" width="32" height="32" alt="icon">
-					</div>
-				</div>
-				<div class="thank-modal__right-col">
-					<h3 class="title">Ваше повідомлення
-						отримано!</h3>
-					<div class="thank-modal__text-holder paragraph">
-						<p>Скоро ми зв'яжемося з вами та обговоримо всі деталі співпраці!</p>
-					</div>
-				</div>
-			</div>
-		</div>
+		@@include('html/_modal.htm',{})
+
 	</div>
 	@@include('html/_js.htm',{})
 </body>
