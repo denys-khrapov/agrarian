@@ -90,7 +90,7 @@
 				<div class="listing">
 					<div class="listing__container container">
 						<div class="listing__content">
-							<a href="#" class="listing__item item-listing">
+							<a data-fancybox data-src='#lobbying-01' href='javascript:;' class="listing__item item-listing">
 								<div class="item-listing__inner">
 									<div class="item-listing__header">
 										<div class="badge badge--graphite-100">Завершено</div>
@@ -317,7 +317,40 @@
 		</main>
 		@@include('html/_footer.htm',{})
 		@@include('html/_modal.htm',{})
-
+		<div style='display: none;' id='lobbying-01' class='lobbying-modal'>
+			<div class='lobbying-modal__inner'>
+				<h2 class='lobbying-modal__title title'>№2194 Проект Закону «Про внесення змін до Земельного кодексу та
+					інших законодавчих актів щодо удосконалення системи управління та дерегуляції у сфері земельних відносин»
+				</h2>
+				<div class="lobbying-modal__badge-box">
+					<div class="lobbying-modal__badge badge badge--graphite-100">Завершено</div>
+					<div class="lobbying-modal__badge badge badge--graphite _icon-Hashtag-l">ЗЕМЛЯ</div>
+				</div>
+				<div class='lobbying-modal__text-holder paragraph'>
+					<p>
+						Документом передбачається зниження ставки ПДВ з 20% до 14% за операціями з постачання та ввезення на
+						територію України деяких видів сільгосппродукції, зокрема: великої рогатої худоби, свиней, молока
+						незбираного, пшениці та жита, ячменю, вівса, кукурудзи, соєвих бобів, цукрових буряків, насіння льону,
+						свиріпи або ріпаку, соняшнику та інших олійних культур.
+					</p>
+					<p>
+						Закон сприяє заощадженню обігових коштів для аграріїв. Це дасть можливість інвестувати їх у розвиток
+						господарств та детінізації агросектору. А також знизить ефективність шахрайських схем (так званих
+						«скруток») через які експортується значна частина зерна, а шахраї незаконно отримують з держбюджету
+						відшкодування ПДВ.
+					</p>
+					<p>
+						Незважаючи на те, що норма про 14% ставку ПДВ була відмінена для великої рогатої худоби, свиней та
+						молока
+						незбираного, була досягнута домовленість з головою податкового комітету ВРУ щодо розробки нового ПЗУ
+						та
+						застосування зниженої ставки ПДВ на весь ланцюг постачання.
+					</p>
+				</div>
+				<a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank"
+					class="link link--xs _icon-FilePdf">Завантажити документ (PDF 1.48 mb)</a>
+			</div>
+		</div>
 	</div>
 	@@include('html/_js.htm',{})
 </body>

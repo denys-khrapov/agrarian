@@ -1,159 +1,140 @@
 @font-face {
-	font-family: "icons";
-	src:
-		// url("../fonts/icons.ttf?r3pzwv") format("truetype"),
-		url("../fonts/icons.woff?r3pzwv") format("woff"),
-		url("../fonts/icons.svg?r3pzwv#icons") format("svg");
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
+  font-family: 'icons';
+  src: url('../fonts/icons.ttf?r3pzwv') format('truetype'),
+  url('../fonts/icons.woff?r3pzwv') format('woff'),
+  url('../fonts/icons.svg?r3pzwv#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
-
-[class^="_icon-"]::before,
-[class*=" _icon-"]::before,
-[class^="_icon-"]::after,
-[class*=" _icon-"]::after {
-	font-family: "icons" !important;
-	speak: never;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+[class^='_icon-']::before,
+[class^='_icon-']::after,
+[class*=' _icon-']::before,
+[class*=' _icon-']::after {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
 ._icon-ArrowDownRight:after {
-	content: "\e900";
+  content: '\e900';
 }
-._icon-ArrowLeft::before {
-	content: "\e901";
+._icon-ArrowLeft:before {
+  content: '\e901';
 }
-._icon-ArrowRight::before {
-	content: "\e902";
+._icon-ArrowRight:before {
+  content: '\e902';
 }
-._icon-ArrowSquareIn::after {
-	content: "\e903";
+._icon-ArrowSquareIn:after {
+  content: '\e903';
 }
 ._icon-ArrowUp:after {
-	content: "\e904";
+  content: '\e904';
 }
 ._icon-Bolt:before {
-	content: "\e905";
+  content: '\e905';
 }
 ._icon-CallChatRounded:before {
-	content: "\e906";
+  content: '\e906';
 }
 ._icon-Check-Square .path1:before {
-	content: "\e907";
-	color: rgb(44, 51, 51);
-	opacity: 0.5;
+  content: '\e907';
+  color: rgb(44, 51, 51);
+  opacity: 0.5;
 }
 ._icon-Check-Square .path2:before {
-	content: "\e908";
-	margin-left: -1em;
-	color: rgb(44, 51, 51);
+  content: '\e908';
+  margin-left: -1em;
+  color: rgb(44, 51, 51);
 }
 ._icon-Crown:before {
-	content: "\e909";
+  content: '\e909';
 }
 ._icon-EnvelopeSimple:before {
-	content: "\e90a";
+  content: '\e90a';
 }
 ._icon-Euro:before {
-	content: "\e90b";
+  content: '\e90b';
 }
 ._icon-Facebook:before {
-	content: "\e90c";
+  content: '\e90c';
 }
 ._icon-FilePdf:before {
-	content: "\e90d";
+  content: '\e90d';
 }
-._icon-Forward::after {
-	content: "\e90e";
+._icon-Forward:after {
+  content: '\e90e';
 }
 ._icon-Hamburger:after {
-	content: "\e90f";
+  content: '\e90f';
 }
 ._icon-Hashtag-l:before {
-	content: "\e910";
+  content: '\e910';
 }
 ._icon-Hashtag-r:after {
-	content: "\e910";
+  content: '\e910';
 }
 ._icon-Home:before {
-	content: "\e911";
+  content: '\e911';
 }
 ._icon-Letter:before {
-	content: "\e912";
+  content: '\e912';
 }
 ._icon-Menu:before {
-	content: "\e913";
+  content: '\e913';
 }
 ._icon-Paperclip:before {
-	content: "\e914";
+  content: '\e914';
 }
 ._icon-Pen:before {
-	content: "\e915";
+  content: '\e915';
 }
 ._icon-PhoneCalling:before {
-	content: "\e916";
+  content: '\e916';
 }
 ._icon-PieChart:before {
-	content: "\e917";
+  content: '\e917';
 }
-._icon-Plus::after {
-	content: "\e918";
+._icon-Plus:before {
+  content: '\e918';
 }
 ._icon-Rocket:before {
-	content: "\e919";
+  content: '\e919';
 }
 ._icon-Search:before {
-	content: "\e91a";
+  content: '\e91a';
 }
 ._icon-ShareFat:before {
-	content: "\e91b";
+  content: '\e91b';
 }
 ._icon-Sledgehammer:before {
-	content: "\e91c";
+  content: '\e91c';
 }
 ._icon-Smile:before {
-	content: "\e91d";
+  content: '\e91d';
 }
-._icon-Star:after {
-	content: "\e91e";
+._icon-Star:before {
+  content: '\e91e';
 }
 ._icon-Twittwr:before {
-	content: "\e91f";
+  content: '\e91f';
 }
 ._icon-UserRounded:before {
-	content: "\e920";
+  content: '\e920';
 }
 ._icon-Whatsapp:before {
-	content: "\e921";
+  content: '\e921';
 }
 ._icon-Widget:before {
-	content: "\e922";
+  content: '\e922';
 }
 ._icon-X:before {
-	content: "\e923";
-}
-
-%ic {
-	font-family: "icons";
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-[class*="_icon-"] {
-	&:before {
-		@extend %ic;
-		display: block;
-	}
+  content: '\e923';
 }

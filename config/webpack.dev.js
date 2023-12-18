@@ -1,13 +1,13 @@
-import fs from 'fs';
-import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import CopyPlugin from "copy-webpack-plugin";
+import fs from 'fs'
+import FileIncludeWebpackPlugin from 'file-include-webpack-plugin-replace'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CopyPlugin from 'copy-webpack-plugin'
 
-import * as path from 'path';
+import * as path from 'path'
 
-const srcFolder = "src";
-const builFolder = "dist";
-const rootFolder = path.basename(path.resolve());
+const srcFolder = 'src'
+const builFolder = 'dist'
+const rootFolder = path.basename(path.resolve())
 
 let pugPages = fs.readdirSync(srcFolder).filter(fileName => fileName.endsWith('.pug'))
 let htmlPages = []
@@ -16,7 +16,7 @@ if (!pugPages.length) {
 	htmlPages = [new FileIncludeWebpackPlugin({
 		source: srcFolder,
 		htmlBeautifyOptions: {
-			"indent-with-tabs": true,
+			'indent-with-tabs': true,
 			'indent_size': 3
 		},
 		replace: [
@@ -24,8 +24,8 @@ if (!pugPages.length) {
 			{ regex: '../img', to: 'img' },
 			{ regex: '@img', to: 'img' },
 			{ regex: 'NEW_PROJECT_NAME', to: rootFolder }
-		],
-	})];
+		]
+	})]
 }
 
 const paths = {
@@ -33,7 +33,7 @@ const paths = {
 	build: path.resolve(builFolder)
 }
 const config = {
-	mode: "development",
+	mode: 'development',
 	devtool: 'inline-source-map',
 	optimization: {
 		minimize: false
@@ -57,18 +57,18 @@ const config = {
 
 		// Розкоментувати на слабкому ПК
 		// (в режимі розробника папка результатом (dist) буде створюватися на диску)
-		/*
+
 		devMiddleware: {
-			writeToDisk: true,
+			writeToDisk: true
 		},
-		*/
+
 
 		watchFiles: [
 			`${paths.src}/**/*.html`,
 			`${paths.src}/**/*.pug`,
 			`${paths.src}/**/*.htm`,
 			`${paths.src}/img/**/*.*`
-		],
+		]
 	},
 	module: {
 		rules: [
@@ -92,20 +92,20 @@ const config = {
 							modules: false,
 							url: {
 								filter: (url, resourcePath) => {
-									if (url.includes("img/") || url.includes("fonts/")) {
-										return false;
+									if (url.includes('img/') || url.includes('fonts/')) {
+										return false
 									}
-									return true;
-								},
-							},
-						},
+									return true
+								}
+							}
+						}
 					}, {
 						loader: 'sass-loader',
 						options: {
-							sourceMap: true,
+							sourceMap: true
 						}
 					}
-				],
+				]
 			}, {
 				test: /\.pug$/,
 				use: [
@@ -132,14 +132,14 @@ const config = {
 							flags: 'g'
 						}
 					}, {
-						loader: "babel-loader",
+						loader: 'babel-loader',
 						options: {
-							presets: ["@babel/preset-react"]
+							presets: ['@babel/preset-react']
 						}
 					}
-				],
+				]
 			}
-		],
+		]
 	},
 	plugins: [
 		...htmlPages,
@@ -162,15 +162,15 @@ const config = {
 					from: `${paths.src}/favicon.ico`, to: `./`,
 					noErrorOnMissing: true
 				}
-			],
-		}),
+			]
+		})
 	],
 	resolve: {
 		alias: {
-			"@scss": `${paths.src}/scss`,
-			"@js": `${paths.src}/js`,
-			"@img": `${paths.src}/img`
-		},
-	},
+			'@scss': `${paths.src}/scss`,
+			'@js': `${paths.src}/js`,
+			'@img': `${paths.src}/img`
+		}
+	}
 }
-export default config;
+export default config

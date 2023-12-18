@@ -339,6 +339,7 @@
     .swiper-button-next,
     .swiper-button-prev,
     .swiper-scrollbar {
+      margin-top: 16px;
       @media (min-width: $pc) {
         margin-top: 24px;
       }
@@ -457,8 +458,29 @@
   }
   // .slide-carousel__card
   &__card {
+    transition: background 0.4s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        background: #fff;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+        .card__text-holder {
+          color: var(--graphite-source);
+        }
+      }
+    }
+    &:active {
+      background: #fff;
+      color: var(--graphite-source);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+      .card__text-holder {
+        color: var(--graphite-source);
+      }
+    }
     &:last-child {
       display: none;
+    }
+    .card__text-holder {
+      transition: color 0.4s ease 0s;
     }
     @media (min-width: $pc) {
       &:last-child {
@@ -2358,4 +2380,3 @@
   &__link {
   }
 }
-
