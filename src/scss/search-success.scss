@@ -68,6 +68,23 @@
   min-width: 256px;
   @include adaptiveValue('min-width', 367, 256, 2, 864, 590);
   flex: 1 0 0;
+  border-radius: 2px;
+  transition: background 0.4s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      background: #FFF;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+    }
+  }
+  &:active {
+    background: #FFF;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.05);
+  }
+  @media (min-width: $pc) {
+    border-radius: 4px;
+    width: 100%;
+    max-width: 526px;
+  }
   // .item-search__inner
   &__inner {
     display: flex;
@@ -76,6 +93,7 @@
     min-height: 96px;
     @media (min-width: $pc) {
       min-height: 124px;
+      padding: 24px 16px;
     }
   }
   // .item-search__left-col

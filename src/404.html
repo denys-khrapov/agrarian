@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='uk'>
+@@include('html/_head.htm',{
+"title":"404"
+})
+
+<body>
+<div class='wrapper'>
+	@@include('html/_header.htm',{})
+	<main class='page'>
+		<section class='breadcrumbs' id='breadcrumbs-section'>
+			<div class='breadcrumbs__container container'>
+				<div class='breadcrumbs__list'>
+						<span>
+							<span>
+								<a class='link _icon-HouseLine' href='/'>головна</a>
+							</span>
+							<span class='brDevider'>
+								<svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
+									<path fill-rule='evenodd' clip-rule='evenodd'
+									      d='M5.67461 3.63039C5.88428 3.45068 6.19993 3.47496 6.37964 3.68462L10.3796 8.35129C10.5401 8.53853 10.5401 8.81484 10.3796 9.00208L6.37964 13.6687C6.19993 13.8784 5.88428 13.9027 5.67461 13.723C5.46495 13.5433 5.44067 13.2276 5.62038 13.018L9.34147 8.67669L5.62038 4.33541C5.44067 4.12575 5.46495 3.8101 5.67461 3.63039Z'
+									      fill='#2C3333' />
+								</svg>
+							</span>
+							<span aria-current='page'>помилка 404</span>
+						</span>
+				</div>
+			</div>
+		</section>
+		<div class='inner-page inner-page--s'>
+			<section class='result' id='result-section'>
+				<div class='result__container container'>
+					<div class='result__left-col'>
+						<div class='result__image-holder'>
+							<img src='img/404.png' width='256' height='190' alt='image'>
+						</div>
+					</div>
+					<div class='result__right-col'>
+						<div class='result__content'>
+							<h1 class='result__title title'>404</h1>
+							<div class='result__subtitle subtitle'>
+								<p>На жаль, ви потрапили на сторінку помилки 404 – це означає, що запитувана вами сторінка не
+									знайдена</p>
+							</div>
+							<div class='result__text-holder paragraph'>
+								<p>Ми перепрошуємо за непорозуміння. Можливо, сторінку було переміщено, видалено або тимчасово
+									недоступно.</p>
+								<p>Поки ми намагаємося відновити цю сторінку, ви можете повернутися на головну сторінку нашого сайту або
+									скористатися навігацією для пошуку інформації, що вас цікавить, в інших розділах.</p>
+							</div>
+						</div>
+						<div class='result__items'>
+							<div class='result__item'>
+								<ul class='result__list'>
+									<li><a class='link link--xs' href='#'>Головна</a></li>
+									<li><a class='link link--xs' href='#'>Новини та статті</a></li>
+									<li><a class='link link--xs' href='#'>Контакти</a></li>
+								</ul>
+							</div>
+							<div class='result__item'>
+								<ul class='result__list'>
+									<li><a class='link link--xs' href='#'>Історія компанії</a></li>
+									<li><a class='link link--xs' href='#'>Наша команда</a></li>
+									<li><a class='link link--xs' href='#'>Члени асоціації</a></li>
+									<li><a class='link link--xs' href='#'>Партнери</a></li>
+								</ul>
+							</div>
+							<div class='result__item'>
+								<ul class='result__list'>
+									<li><a class='link link--xs' href='#'>Підтримка АПК</a></li>
+									<li><a class='link link--xs' href='#'>Земля</a></li>
+									<li><a class='link link--xs' href='#'>Освіта та наука</a></li>
+									<li><a class='link link--xs' href='#'>Техніка</a></li>
+									<li><a class='link link--xs' href='#'>Інше</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</main>
+	@@include('html/_footer.htm',{})
+	@@include('html/_modal.htm',{})
+</div>
+@@include('html/_js.htm',{})
+</body>
+
+</html>
+
