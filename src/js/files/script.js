@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 	initHoverNewsCard()
 	initSearch()
 
+
 	function initSearch() {
 		$('.search-btn').click(function() {
 			$('.bar').toggleClass('active')
@@ -398,7 +399,27 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	})
 
-
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

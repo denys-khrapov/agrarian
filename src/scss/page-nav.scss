@@ -1,92 +1,105 @@
 .pagination {
-	a {
-		span {
-			font-size: 0;
-		}
-		&.blocked {
-			pointer-events: none;
-			svg {
-				path {
-					fill: var(--graphite-300);
-				}
-			}
-		}
-	}
-	.page {
-	}
+  a {
+    span {
+      font-size: 0;
+    }
+    &.blocked {
+      pointer-events: none;
+      svg {
+        path {
+          fill: var(--graphite-300);
+        }
+      }
+    }
+  }
+  .page {
+  }
+  &--justify {
+    @media (max-width: 1279px) {
+      .previouspostslink {
+        margin-right: auto;
+      }
+      .nextpostslink {
+        margin-left: auto;
+      }
+      .wp-pagenavi > span[aria-current='page']:first-child {
+        margin-left: auto;
+      }
+      .wp-pagenavi > span[aria-current='page']:last-child {
+        margin-right: auto;
+      }
+    }
+  }
 }
 .wp-pagenavi {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	column-gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
 }
 .previouspostslink {
-	margin-right: 8px;
-	&.page-nav-link {
-		padding: 10px 24px;
-	}
-	@media (min-width: $pc) {
-		margin-right: 24px;
-	}
+  margin-right: 8px;
+  &.page-nav-link {
+    padding: 10px 24px;
+  }
+  @media (min-width: $pc) {
+    margin-right: 24px;
+  }
 }
 .prevEn {
 }
-
 .smaller {
 }
-
 .larger {
 }
 .nextpostslink {
-	margin-left: 8px;
-	&.page-nav-link {
-		padding: 10px 24px;
-	}
-	@media (min-width: $pc) {
-		margin-left: 24px;
-	}
+  margin-left: 8px;
+  &.page-nav-link {
+    padding: 10px 24px;
+  }
+  @media (min-width: $pc) {
+    margin-left: 24px;
+  }
 }
 .nextEn {
 }
-
 .page-nav-link {
-	border-radius: 1px;
-	background: var(--mint-100);
-	color: var(--graphite-source);
-	font-family: "Inter", sans-serif;
-	font-size: 12px;
-	font-weight: 400;
-	line-height: 1;
-	letter-spacing: 0.24px;
-	padding: 12px;
-	text-transform: uppercase;
-	transition: color 0.4s ease 0s;
-	display: flex;
-	svg {
-		path {
-			transition: all 0.4s ease 0s;
-		}
-	}
-	&.current {
-		color: var(--teal-500);
-	}
-	@media (any-hover: hover) {
-		&:hover {
-			color: var(--graphite-500);
-			svg {
-				path {
-					fill: var(--graphite-500);
-				}
-			}
-		}
-	}
-	&:active {
-		color: var(--teal-500);
-		svg {
-			path {
-				fill: var(--teal-500);
-			}
-		}
-	}
+  border-radius: 1px;
+  background: var(--mint-100);
+  color: var(--graphite-source);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.24px;
+  padding: 12px;
+  text-transform: uppercase;
+  transition: color 0.4s ease 0s;
+  display: flex;
+  svg {
+    path {
+      transition: all 0.4s ease 0s;
+    }
+  }
+  &.current {
+    color: var(--teal-500);
+  }
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--graphite-500);
+      svg {
+        path {
+          fill: var(--graphite-500);
+        }
+      }
+    }
+  }
+  &:active {
+    color: var(--teal-500);
+    svg {
+      path {
+        fill: var(--teal-500);
+      }
+    }
+  }
 }
