@@ -38,10 +38,6 @@
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
-    @media (min-width: $pc) {
-      row-gap: 48px;
-    }
   }
   // .search__items
   &__items {

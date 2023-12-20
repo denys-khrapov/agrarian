@@ -196,17 +196,25 @@ jQuery(document).ready(function($) {
 		let windowWidth = $(window).width()
 		if (windowWidth >= 1280) {
 			$('.item-news').hover(
-				function() { // При наведении курсора
-					$(this).find('.item-news__text-holder-js').css('max-height', '158px') // Увеличиваем высоту
+				function() {
+					$(this).find('.item-news__text-holder-js').css('max-height', '158px')
 				},
-				function() { // Когда курсор убирается
-					$(this).find('.item-news__text-holder-js').css('max-height', '80px') // Возвращаем начальную высоту
+				function() {
+					$(this).find('.item-news__text-holder-js').css('max-height', '80px')
+				}
+			)
+			$('.item-news-three-col').hover(
+				function() {
+					$(this).find('.item-news-three-col__text-holder-js').css('max-height', '158px')
+				},
+				function() {
+					$(this).find('.item-news-three-col__text-holder-js').css('max-height', '80px')
 				}
 			)
 		} else {
-
 		}
 	}
+
 
 	function checkSwiperButtons() {
 		let nextButton = $('.slider-hero .swiper-button-next')
