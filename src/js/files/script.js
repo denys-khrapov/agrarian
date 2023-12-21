@@ -1,7 +1,3 @@
-// Підключення функціоналу "Чертоги Фрілансера"
-// Підключення списку активних модулів
-
-
 jQuery(document).ready(function($) {
 	initSwiper()
 	initHoverNewsCard()
@@ -407,14 +403,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		})
 	})
 
+
+	const copyLinkButton = document.getElementById('copyLinkButton')
+
+	if (copyLinkButton) {
+		copyLinkButton.addEventListener('click', (event) => {
+			// Получение URL из data-атрибута
+			const urlToCopy = event.currentTarget.getAttribute('data-href')
+
+			// Создание временного input для копирования
+			const sysInput = document.createElement('input')
+			sysInput.value = urlToCopy
+			document.body.appendChild(sysInput)
+			sysInput.select()
+			document.execCommand('copy')
+			document.body.removeChild(sysInput)
+		})
+
+	}
+
 })
-
-
-
-
-
-
-
 
 
 
