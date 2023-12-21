@@ -26,6 +26,8 @@
       <option name="NEW_LINE_AFTER_PHP_OPENING_TAG" value="true" />
     </PHPCodeStyleSettings>
     <ScssCodeStyleSettings>
+      <option name="HEX_COLOR_UPPER_CASE" value="true" />
+      <option name="HEX_COLOR_LONG_FORMAT" value="true" />
       <option name="BLANK_LINES_BETWEEN_BLOCKS" value="0" />
       <option name="BLANK_LINES_AROUND_NESTED_SELECTOR" value="0" />
       <option name="USE_DOUBLE_QUOTES" value="false" />
